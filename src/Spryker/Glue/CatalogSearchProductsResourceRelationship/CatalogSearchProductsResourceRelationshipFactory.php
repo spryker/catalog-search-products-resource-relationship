@@ -14,17 +14,11 @@ use Spryker\Glue\Kernel\AbstractFactory;
 
 class CatalogSearchProductsResourceRelationshipFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\CatalogSearchProductsResourceRelationship\Processor\Expander\CatalogSearchProductsResourceRelationshipExpanderInterface
-     */
     public function createCatalogSearchProductsResourceRelationshipExpander(): CatalogSearchProductsResourceRelationshipExpanderInterface
     {
         return new CatalogSearchProductsResourceRelationshipExpander($this->getProductsResource());
     }
 
-    /**
-     * @return \Spryker\Glue\CatalogSearchProductsResourceRelationship\Dependency\RestResource\CatalogSearchProductsResourceRelationshipToProductsRestApiInterface
-     */
     public function getProductsResource(): CatalogSearchProductsResourceRelationshipToProductsRestApiInterface
     {
         return $this->getProvidedDependency(CatalogSearchProductsResourceRelationshipDependencyProvider::RESOURCE_PRODUCTS);

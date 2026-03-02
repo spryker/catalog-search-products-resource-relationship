@@ -12,12 +12,6 @@ use Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface;
 
 interface CatalogSearchProductsResourceRelationshipToProductsRestApiInterface
 {
-    /**
-     * @param string $sku
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface|null
-     */
     public function findProductAbstractBySku(string $sku, RestRequestInterface $restRequest): ?RestResourceInterface;
 
     /**

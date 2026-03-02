@@ -21,11 +21,6 @@ class CatalogSearchProductsResourceRelationshipDependencyProvider extends Abstra
      */
     public const RESOURCE_PRODUCTS = 'RESOURCE_PRODUCTS';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -34,11 +29,6 @@ class CatalogSearchProductsResourceRelationshipDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductsResource(Container $container): Container
     {
         $container->set(static::RESOURCE_PRODUCTS, function (Container $container) {

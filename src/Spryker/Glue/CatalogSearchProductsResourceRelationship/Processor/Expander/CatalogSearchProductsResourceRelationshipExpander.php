@@ -31,9 +31,6 @@ class CatalogSearchProductsResourceRelationshipExpander implements CatalogSearch
      */
     protected $productsResource;
 
-    /**
-     * @param \Spryker\Glue\CatalogSearchProductsResourceRelationship\Dependency\RestResource\CatalogSearchProductsResourceRelationshipToProductsRestApiInterface $productsResource
-     */
     public function __construct(CatalogSearchProductsResourceRelationshipToProductsRestApiInterface $productsResource)
     {
         $this->productsResource = $productsResource;
@@ -97,11 +94,6 @@ class CatalogSearchProductsResourceRelationshipExpander implements CatalogSearch
         return $productAbstractSkus;
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceInterface $restResource
-     *
-     * @return string
-     */
     protected function getRestResourceIdentifier(RestResourceInterface $restResource): string
     {
         return $restResource->getType() . ':' . $restResource->getId();
