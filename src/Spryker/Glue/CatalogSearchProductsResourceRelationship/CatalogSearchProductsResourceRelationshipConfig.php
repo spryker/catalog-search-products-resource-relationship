@@ -12,6 +12,8 @@ use Spryker\Glue\Kernel\AbstractBundleConfig;
 class CatalogSearchProductsResourceRelationshipConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @uses \Spryker\Glue\ProductsRestApi\ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS
      *
      * @var string
